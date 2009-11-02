@@ -1,0 +1,38 @@
+<style type="text/css">
+
+  .left_div
+  {
+    border:1px solid gray;
+    width:50%;
+    background-color:rgb(255,74,0);
+    text-align:left;
+  }
+  .right_div{
+    border:1px solid gray;
+    width:50%;
+    background-color:rgb(0, 33, 165);
+    text-align:right
+  }
+  body
+  {
+    font-family:verdana;
+    margin-left:210px;
+    background:#5d9ab2 url('img_tree.png') no-repeat 10px 5px;
+  }
+</style>
+<body>
+  <div class="left_div" >
+    <h1>Dial-a-gator </h1>
+  </div>
+  <div class="right_div">
+    <h1>Gainesville RTS Bus Locator</h1>
+  </div>
+  <h2>Dial: (866) 583-6913  and enter the pin:7400-1914, and enjoy the rts bus locator on your phone. Enjoy!</h2>
+      srinivas {dot} muddana {at} gmail {dot} com
+      <br/>
+      smuddana {at} ufl {dot} edu
+
+<form action="/handle" method="post">
+<input type="submit">submit<>
+</form>
+ </body>
