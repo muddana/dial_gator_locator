@@ -8,6 +8,7 @@ require 'open-uri'
 
 class Route
   @@base_url = "http://www.gator-locator.com/t"
+  #have a script for extracting the following info need to use some kind of cron script to automate it.
   @@route_number_to_name =  { 16=>"Shands to Sugar Hill", 5=>"Downtown to Oaks Mall", 17=>"Shands to Downtown Station", 12=>"McCarty to Campus Club", 34=>"Hub to Lexington Cross Apts.",  300 => "Later Gator A", 301=>"Later Gator B", 13=>"Shands to Florida Works", 35=>"McCarty to Homestead Apts.", 302=>"Later Gator C R", 8=>"Shands to Northwood Village", 20=>"McCarty to Oaks Mall", 9=>"McCarty to Hunters Run", 26=>"UF East/West Circulator R", 10=>"Downtown Station to SFC"}.merge( {126=>"UF East/West Circulator R", 401=>"Downtown to Oaks Mall via SW 20th Ave R", 407=>"Downtown to Gainesville Mall R", 402=>"Downtown to Gateway via Archer Rd R", 408=>"Shands to Northwood Village R", 403=>"Downtown to Lexington Cross R", 404=>"Shands to Florida Works/Sugar Hill Rt 40",405=>"Shands to Florida Works/Sugar Hill Rt 40", 400=>"Downtown to Oaks Mall via University Ave R", 406=>"Downtown to Waldo Rd at 39th Ave. R"})
   @@rts_to_tranloc_mapper =  {16=>66, 5=>75, 17=>67, 12=>61, 34=>59, 300 => 3, 301=>4, 13=>65, 35=>68, 302=>1, 8=>63, 20=>55, 9=>64, 26=>40, 10=>76}.merge({126=>40, 401=>71, 407=>48, 402=>57, 408=>74, 403=>72, 405=>78, 404=>78,400=>58, 406=>56})
   @@abbreviations = {/\sSW\s/ => ' south west ', /\sSE\s/ => ' south east ', /\sNW\s/ => ' north west ', /\sNE\s/ => ' north east ', /\sSt(\s|\.)/ => ' street ', /\sDr(\s|\.)/ => ' drive ' , /\sPl(\s|\.)/ => ' place '}
