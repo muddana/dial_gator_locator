@@ -48,10 +48,10 @@ post '/handle' do
   builder :handle
 end
 
-get  '/route_info/:Digits' do
-  route = Route.find_route(params[:Digits].to_i)
+get  '/route_info/?*' do
+  route = Route.find_route(params[:Digits].strip.to_i) if params[:Digits]
   content_type 'application/xml', :charset => 'utf-8'
-  if route.found?
+  if route && route.found?
     @route_name, @busses = route.get_info
     builder :route_info
   else
