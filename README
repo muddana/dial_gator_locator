@@ -1,3 +1,8 @@
 == dial_gator_locator_sinatra
 
-You should document your project here.
+A Simple Telephonic Interface for Gainesville's RTS-Locator service (http://ufl.transloc.com/). Especially useful for non-smart mobile phones. Implemented in Rails. Ported to Sinatra because its sweet!.
+
+The hashes @@route_number_to_name , @@rts_to_tranloc_mapper right now have to mapping from the route_number to their "actual_id" hard coded. Need to write a cron job to update this mapping regularly on its own.
+
+This code could be hosted at twilio for using this. The xml response is according to Twilio's xml format.
+
