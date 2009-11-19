@@ -47,14 +47,15 @@ post '/handle' do
   content_type 'application/xml', :charset => 'utf-8'
   builder :handle
 end
-# /\/route_info\?Digits=(\d+)/
+
 get  '/route_info/:Digits' do
   route = Route.find_route(params[:Digits].to_i)
+  content_type 'application/xml', :charset => 'utf-8'
   if route.found?
     @route_name, @busses = route.get_info
-    #format.xml
+    builder :route_info
   else
-    #format.xml { render :action => "not_found.xml"}
+    builder :not_found
   end
 end
 
